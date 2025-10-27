@@ -22,13 +22,13 @@ export default function Home() {
             Something About Us
           </div>
           <div className="hidden sm:inline text-black text-center text-xs sm:text-lg my-5">
-            Cestoball is an Argentine sport that was created in 1897 by professor Enrique Romero Brest, the father of Physical Education in Argentina and was first named "Pelota El Cesto". <br />
+            Cestoball is an Argentine sport that was created in 1897 by professor Enrique Romero Brest, the father of Physical Education in Argentina and was first named &#34;Pelota El Cesto&#34;. <br />
             In 1903, the sport was included in the teaching of Physical Education syllabuses and in 1986 it adopted its present name after an important change in the regulations was introduced. This made Cestoball a dynamic discipline of high performance. A cestoball team is made up players of either the same or different genders. <br />
             In Cestoball, different physical quatities are developed, together with the psychological aspects and social values of the people involved in a game. What is more, due to its tactical and technical features, and the dynamics inherent in the game, it fosters a wide sense of coorperation among the players since there is no bouncing of the ball. <br />
             The infrastructure and equipements needed for its practice are scare - goalposts, a ball and a court and they facilitate socialization and integration of a great number of people with little equipement; also a quite small space for doing this fun activity is enough, so it is ideal for teaching at schools
           </div>
           <div className="sm:hidden text-black text-center text-xs sm:text-lg my-1">
-            Cestoball is an Argentine sport that was created in 1897 by professor Enrique Romero Brest, was first named "Pelota El Cesto". <br />
+            Cestoball is an Argentine sport that was created in 1897 by professor Enrique Romero Brest, was first named &#34;Pelota El Cesto&#34;. <br />
             In 1903, the sport was included in the teaching of Physical Education syllabuses and in 1986 it adopted its present name after an important change in the regulations was introduced. This made Cestoball a dynamic discipline of high performance.
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function Home() {
 
     {/* membersSection */}
 
-    
+
     </>
   );
 }
