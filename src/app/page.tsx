@@ -31,6 +31,12 @@ export default function Home() {
           <CarouselContent>
             <CarouselItem>
               <Image
+              src={car3}
+              alt="image"
+              height={500}/>
+            </CarouselItem>
+            <CarouselItem>
+              <Image
               src={car1}
               alt="image"/>
             </CarouselItem>
