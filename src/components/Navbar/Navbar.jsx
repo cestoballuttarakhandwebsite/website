@@ -9,17 +9,12 @@ import Image from 'next/image'
 import logoImg from "@/assets/Logo.jpeg"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { TextAlignJustify } from 'lucide-react';
+
 
 
 function Navbar() {
-    const [isOpen, setIsOpen] = React.useState(false)
   return (
+    <>
     <div className='list-none w-full bg-blue-600'>
         <div className='flex justify-between w-full h-9 sm:h-18'>
             <div className='flex justify-start h-9 sm:h-18 w-9 sm:w-18'>
@@ -36,29 +31,13 @@ function Navbar() {
             <div className="sm:hidden text-white font-bold sm:text-3xl text-center pt-1">
             CESTOBALL Uttarakhand
             </div>
-            <div className='pt-4 pr-3 hidden sm:inline'>
+            <div className='sm:pt-4 pt-1 pr-1 sm:pr-3 sm:inline'>
                 <Link href="/login">
-                <button className=' bg-orange-400 text-white w-20 p-2 py-0.5 cursor-pointer font-bold rounded-sm '>Login</button>
+                <button className=' bg-orange-400 text-white w-13 sm:w-20 sm:p-2 sm:py-0.5 cursor-pointer sm:font-bold rounded-sm text-xs sm:text-lg'>Login</button>
                 </Link>
             </div>
-            <div className='w-6 flex pt-1 sm:hidden justify-end'>
-                <Collapsible
-                open={isOpen}
-                onOpenChange={setIsOpen}
-                className='flex w-5 flex-col'
-                >
-                    <div>
-                        <CollapsibleTrigger className='align-middle' asChild>
-                        <Button variant="ghost" size="xl" className='text-white mr-2 p-0 mt-0'>
-                        <TextAlignJustify />
-                        </Button>
-                    </CollapsibleTrigger>
-                    </div>
-                    
-                </Collapsible>
-            </div>
         </div>
-        <div className='hidden sm:flex h-6 bg-white justify-center text-black text-sm sm:text-xl font-bold'>
+        <div className='sm:flex h-5 sm:h-6 bg-white justify-items-center sm:justify-center text-black text-sm sm:text-xl font-bold'>
             <NavigationMenu className='space-x-1.5 sm:space-x-10 p-0'>
                 <NavigationMenuItem>
                     <NavigationMenuLink href='/' className='cursor-pointer'>Home
@@ -79,6 +58,7 @@ function Navbar() {
             </NavigationMenu>
         </div>
     </div>
+    </>
   )
 }
 
