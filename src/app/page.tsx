@@ -9,26 +9,14 @@ import car1 from '@/assets/HomeCarousal1.jpg'
 import car2 from '@/assets/HomeCarousal2.jpg'
 import car3 from '@/assets/HomeCarousal3.jpg'
 import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/js/bootstrap.js";
 
 // shadcnimports
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import { useEffect } from "react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar/Navbar";
 
 
 export default function Home() {
 
-  useEffect(()=>{
-    require("bootstrap/dist/js/bootstrap.js")
-  })
 
   return (
     <>

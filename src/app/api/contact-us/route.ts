@@ -1,6 +1,5 @@
 import { sendContactUsEmail } from "@/helpers/sendContactUsEmail";
-import { NextRequest } from "next/server";
-import { success } from "zod";
+import { NextRequest} from "next/server";
 
 export async function POST(request: NextRequest){
     try {
@@ -11,18 +10,18 @@ export async function POST(request: NextRequest){
             return Response.json({
             success: false,
             message: "Error Sending Message"
-        })
+        }) 
         }
 
         return Response.json({
             success: true,
             message: "Message Sent Successfully"
         })
-    } catch (error) {
+    } catch(error) {
         console.error(error)
-        return {
+        return Response.json({
             success: false,
             message: "Error Sending Message"
-        }
+        })
     }
 }

@@ -7,7 +7,7 @@ export async function sendContactUsEmail(name: string, from: string, content: st
     try {
         await resend.emails.send({
             from:"cestoball.website@cestoballuttarakhand.in",
-            to: ["cestoballuttarakhand@gmail.com"],
+            to: ["abhinavd2210@gmail.com"],
             subject: "Email from Cestoball Uttarakhand Website",
             react: ContactUsEmail({name: name, from: from, content: content}),
         })

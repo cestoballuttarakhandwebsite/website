@@ -1,55 +1,46 @@
-"use client"
-import Image from 'next/image'
-import React, { use, useState } from 'react'
-import whatsappBtn from "@/assets/Chat with Us on Whatsapp.png"
-import instaBtn from "@/assets/Chat with Us on Instagram.png"
+'use client'
 
-// js form imports
-
+import React, { useState } from 'react'
+import {Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import {zodResolver} from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import * as z from 'zod'
-import { contactUsSchema } from '@/schemas/contactUsEmail.schema'
-import { useRouter } from 'next/navigation'
-import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import whatsappBtn from '@/assets/Chat with Us on Whatsapp.png'
+import Image from 'next/image'
+import instaBtn from '@/assets/Chat with Us on Instagram.png'
 import { Loader2 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import axios from 'axios'
-import { toast } from 'sonner'
 import { ApiResponse } from '@/types/ApiResponse'
+import { toast } from 'sonner'
+import { contactUsSchema } from '@/schemas/contactUsEmail.schema'
+import z from 'zod'
+import { useRouter } from 'next/navigation'
+import { useForm } from 'react-hook-form'
+
 
 function page() {
-
-  // states
-  const [isSending, setIsSending] = useState(false)
-  const [messageSent, setMessageSent] = useState("")
-  // const router = useRouter()
-
-
-  // zod implementation
-
-  const form = useForm<z.infer<typeof contactUsSchema>>({
-    resolver: zodResolver(contactUsSchema),
-    defaultValues: {
-      from: "",
-      content: ""
+    const [isSending, setIsSending] = useState(false)
+    const router = useRouter()
+    const onSubmit = async (data: z.infer<typeof contactUsSchema>) =>{
+        try {
+            setIsSending(true)
+            const result = await axios.post<ApiResponse>('/api/contact-us',data)
+            toast(result.data.message)
+            router.refresh()
+        } catch (error) {
+            console.error(error)
+        }
+        setIsSending(false)
     }
-  })
 
-
-  const onSubmit = async (data: z.infer<typeof contactUsSchema>) => {
-    setIsSending(true)
-    try {
-      const result = await axios.post<ApiResponse>('/api/contact-us',data)
-      toast(result.data.message)
-    } catch (error) {
-      console.error(error)
-    }
-    setIsSending(false)
-  }
-
-
+    const form = useForm<z.infer<typeof contactUsSchema>>({
+        resolver: zodResolver(contactUsSchema),
+        defaultValues:{
+            from: '',
+            name: '',
+            content: ''
+        }
+    })
   return (
     <>
     <div className="w-full sm:h-24 h-14 "></div>
