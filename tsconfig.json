@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/ContactContext.js", "src/context/ContactContextProvider.jsx", "src/components/Forms/ContactUs.tsx"],
   "exclude": ["node_modules"]
 }
