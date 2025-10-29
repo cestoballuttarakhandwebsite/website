@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import gameAbstract from "@/assets/gameAbstract.png"
 import chairmanPhoto from '@/assets/ShukdevSingh.jpg'
@@ -7,61 +8,68 @@ import generalSecretary from '@/assets/Shashikant.jpg'
 import car1 from '@/assets/HomeCarousal1.jpg'
 import car2 from '@/assets/HomeCarousal2.jpg'
 import car3 from '@/assets/HomeCarousal3.jpg'
+import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/js/bootstrap.js";
 
 // shadcnimports
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import Link from "next/link";
 
 
 export default function Home() {
+
+
   return (
     <>
-
-    {/* heroSection */}
-
-    <div className="flex w-full h-[15rem] sm:h-[calc(100vh-(13rem))] mb-0">
-      <div className="w-full sm:w-2/3">
-        <Carousel className="w-full sm:mt-10 sm:ml-14 sm:w-202">
-          <CarouselContent>
-            <CarouselItem>
-              <Image
-              src={car3}
-              alt="image"
-              height={500}/>
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-              src={car1}
-              alt="image"/>
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-              src={car2}
-              alt="image"
-              height={500}/>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex"/>
-          <CarouselNext className="hidden sm:flex"/>
-        </Carousel>
+    <div>
+      <div className="w-full sm:h-24 h-14 ">
       </div>
-      <div className="hidden sm:flex sm:w-1/3">
+      {/* heroSectionBootstrap */}
 
+    <div className="flex w-full h-[12.5rem] sm:h-[calc(100vh-(13rem))] mb-0">
+      <div className="w-full sm:w-2/3">
+        <div id="carouselExampleIndicators" className="carousel slide">
+          <div className="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <Link href={"galley/photos"}>
+            <Image src={car3} className="d-block w-100" alt="..."/>
+            </Link>
+          </div>
+          <div className="carousel-item">
+            <Link href={"galley/photos"}>
+            <Image src={car1} className="d-block w-100" alt="..."/>
+            </Link>
+          </div>
+          <div className="carousel-item">
+            <Link href={"galley/photos"}>
+            <Image src={car2} className="d-block w-100" alt="..."/>
+            </Link>
+          </div>
+        </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+    </div>
       </div>
     </div>
+
+    {/* heroSectionBootstrap */}
 
     {/* gameAboutSection */}
   
 
-    <div className=" w-full flex sm:h-[calc(100vh-(14rem))]">
-      <div className="flex w-1/2 sm:w-2/3">
-        <div className="mx-auto my-auto">
+    <div className=" w-full py-0 mt-0 flex sm:h-[calc(100vh-(14rem))]">
+      <div className="flex w-2/3 py-0 my-0 mt-0">
+        <div className="mx-auto my-0 py-0 sm:my-auto">
           <div className="text-lg sm:text-5xl font-bold text-[#150EA2] text-center">
             Welcome to Cestoball
           </div>
@@ -80,15 +88,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex w-1/2 sm:w-1/3">
-      <div className="hidden sm:inline mx-auto my-auto">
+      <div className="flex w-1/3">
+      <div className="hidden sm:inline mx-auto my-auto ">
         <Image
         src={gameAbstract}
         alt="gameAbstract"
         height={400}
         />
       </div>
-      <div className="sm:hidden mx-auto my-auto">
+      <div className="sm:hidden mx-auto my-auto pr-0 mr-0">
         <Image
         src={gameAbstract}
         alt="gameAbstract"
@@ -178,7 +186,7 @@ export default function Home() {
 
     {/* membersSection */}
 
-
+    </div>
     </>
   );
 }
