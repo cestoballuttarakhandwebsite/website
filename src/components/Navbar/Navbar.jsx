@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import Image from 'next/image'
 import logoImg from "@/assets/Logo.jpeg"
-import { Button } from "@/components/ui/button"
+import mobileNavbar from '@/assets/Mobile Navbar.png'
 import Link from 'next/link'
 
 
@@ -15,9 +15,9 @@ import Link from 'next/link'
 function Navbar() {
   return (
     <>
-    <div className='list-none w-full bg-blue-600'>
-        <div className='flex justify-between w-full h-9 sm:h-18'>
-            <div className='flex justify-start h-9 sm:h-18 w-9 sm:w-18'>
+    <div className='list-none w-full sm:bg-blue-600'>
+        <div className='sm:flex sm:justify-between w-full h-18 sm:h-18'>
+            <div className='hidden sm:flex justify-start h-9 sm:h-18 w-9 sm:w-18'>
                 <Link href={"/"}>
                 <Image
                 src={logoImg}
@@ -28,16 +28,18 @@ function Navbar() {
             <div className="hidden sm:inline text-white font-bold text-3xl text-center pt-4">
                 Welcome to CESTOBALL Uttarakhand
             </div>
-            <div className="sm:hidden text-white font-bold sm:text-3xl text-center pt-1">
-            CESTOBALL Uttarakhand
+            <div className="sm:hidden w-screen inline-block justify-center justify-items-center p-0 m-0 border-b-2 border-black">
+            <Image
+            src={mobileNavbar}
+            />
             </div>
             <div className='sm:pt-4 pt-1 pr-1 sm:pr-3 sm:inline'>
                 <Link href="/login">
-                <button className=' bg-orange-400 text-white w-13 sm:w-20 sm:p-2 sm:py-0.5 cursor-pointer sm:font-bold rounded-sm text-xs sm:text-lg'>Login</button>
+                <button className='hidden sm:block bg-orange-400 text-white w-13 sm:w-20 sm:p-2 sm:py-0.5 cursor-pointer sm:font-bold rounded-sm text-xs sm:text-lg'>Login</button>
                 </Link>
             </div>
         </div>
-        <div className='sm:flex h-5 sm:h-6 bg-white justify-items-center sm:justify-center text-black text-sm sm:text-xl font-bold'>
+        <div className='sm:flex h-5 sm:h-6 bg-white justify-items-center sm:justify-center text-black text-sm sm:text-xl font-bold border-b-black border-b-2 sm:border-none'>
             <NavigationMenu className='space-x-1.5 sm:space-x-10 p-0'>
                 <NavigationMenuItem>
                     <NavigationMenuLink href='/' className='cursor-pointer'>Home

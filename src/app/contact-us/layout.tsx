@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { Toaster } from 'sonner';
 import ContactUsForm from "@/components/Forms/ContactUsForm";
+import Navbar from "@/components/Navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +29,10 @@ export default function RootLayout({
       <body
         className={`relative ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         <div className='block justify-items-center py-0 my-0 sm:flex sm:h-[calc(100vh-(8.75rem))]'>
 
-            <div className='sm:flex block w-full sm:w-1/2 text-center sm:py-0 text-3xl h-full sm:mb-0 mb-2 sm:my-12'>
+            <div className='sm:flex block w-full sm:w-1/2 text-center sm:py-0 text-3xl h-full sm:mb-0 mb-2'>
                 <ContactUsForm />
             </div>
 

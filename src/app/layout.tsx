@@ -32,6 +32,7 @@ export default function RootLayout({
       <div className="fixed w-full z-10">
         <Navbar/>
       </div>
+
         {children}
 
         <Footer/>
