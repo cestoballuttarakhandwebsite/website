@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gameAbstract from "@/assets/gameAbstract.png"
+import gameAbstract from "@/assets/newGameAbstract.jpg"
 import chairmanPhoto from '@/assets/ShukdevSingh.jpg'
 import presidentPhoto from '@/assets/PoonamPalival.jpg'
 import treasurerPhoto from '@/assets/LaxmiRani.jpg'
