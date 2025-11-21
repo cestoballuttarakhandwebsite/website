@@ -1,27 +1,18 @@
+'use client'
 import Image from "next/image";
 import gameAbstract from "@/assets/newGameAbstract.jpg"
 import chairmanPhoto from '@/assets/ShukdevSingh.jpg'
 import presidentPhoto from '@/assets/PoonamPalival.jpg'
 import treasurerPhoto from '@/assets/LaxmiRani.jpg'
 import generalSecretary from '@/assets/Shashikant.jpg'
-import HomeHeroSectionCarousal from "@/components/Carousels/HomeHeroSectionCarousal";
+
 
 
 export default function Home() {
   return (
     <>
 
-     {/* heroSection */}
-
-      <div className="flex w-full h-[15rem] sm:h-[calc(100vh-(13rem))] mb-0">
-        <div className="w-full sm:w-2/3">
-        <HomeHeroSectionCarousal />
-        </div>
-        <div className="hidden sm:flex sm:w-1/3">
-
-        </div>
-      </div>
-
+    
     {/* gameAboutSection */}
 
 
@@ -70,7 +61,7 @@ export default function Home() {
     {/* membersSection */}
 
     
-    <div className="w-full bg-[#f2f2f2] h-[15rem] sm:h-[28rem]">
+    <div className="hidden sm:block w-full bg-[#f2f2f2] h-[15rem] sm:h-[28rem] h-[18rem]">
       <div className="sm:text-2xl py-2 ml-4 font-bold text-[#0B45F2] sm:ml-10 sm:py-5">
         People Connected with Us...
       </div>
@@ -139,11 +130,12 @@ export default function Home() {
 
       </div>
 
+      {/* mobile members section  */}
+
     </div>
 
-
+      
     {/* membersSection */}
-
 
     </>
   );

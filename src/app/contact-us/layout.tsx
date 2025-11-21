@@ -4,6 +4,7 @@ import "../globals.css";
 import { Toaster } from 'sonner';
 import ContactUsForm from "@/components/Forms/ContactUsForm";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,8 +40,8 @@ export default function RootLayout({
             <div  className='block sm:block sm:w-1/2 justify-items-center mb-2 mt-10 sm:my-20'>
                 {children}
             </div>
-
         </div>
+        <Footer/>
         <Toaster/>
       </body>
     </html>

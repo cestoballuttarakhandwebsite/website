@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, } from '../ui/carousel'
 import Image from 'next/image'
 import car1 from '@/assets/HomeCarousal1.jpg'
 import car2 from '@/assets/HomeCarousal2.jpg'
@@ -8,7 +8,8 @@ import car3 from '@/assets/HomeCarousal3.jpg'
 function HomeHeroSectionCarousal() {
   return (
     <div>
-        <Carousel className="w-full mt-20 sm:mt-10 sm:ml-14 sm:w-202">
+        <Carousel
+         className="w-full mt-20 sm:mt-10 sm:ml-14 sm:w-202">
           <CarouselContent>
             <CarouselItem>
               <Image
@@ -29,8 +30,6 @@ function HomeHeroSectionCarousal() {
               className='h-full w-auto object-cover'/>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex"/>
-          <CarouselNext className="hidden sm:flex"/>
         </Carousel>
       </div>
   )

@@ -31,6 +31,7 @@ function Navbar() {
             <div className="sm:hidden w-screen inline-block justify-center justify-items-center p-0 m-0 border-b-2 border-black">
             <Image
             src={mobileNavbar}
+            alt="..."
             />
             </div>
             <div className='sm:pt-4 pt-1 pr-1 sm:pr-3 sm:inline'>
