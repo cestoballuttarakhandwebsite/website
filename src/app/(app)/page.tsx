@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import gameAbstract from "@/assets/newGameAbstract.jpg"
 import chairmanPhoto from '@/assets/ShukdevSingh.jpg'

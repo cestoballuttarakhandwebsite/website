@@ -41,7 +41,7 @@ function Navbar() {
             </div>
         </div>
         <div className='sm:flex h-5 sm:h-6 bg-white justify-items-center sm:justify-center text-black text-sm sm:text-xl font-bold border-b-black border-b-2 sm:border-none'>
-            <NavigationMenu className='space-x-1.5 sm:space-x-10 p-0'>
+            <NavigationMenu className='space-x-1.5 sm:space-x-10 p-0 text-black decoration-0'>
                 <NavigationMenuItem>
                     <NavigationMenuLink href='/' className='cursor-pointer'>Home
                     </NavigationMenuLink>
